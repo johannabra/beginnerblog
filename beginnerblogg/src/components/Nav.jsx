@@ -10,7 +10,7 @@ const Nav = () => {
         <>
           <p className="mx-5 font-bold">Welcome {currentUser.email}</p>
           <button onClick={signOutUser}>Log out</button>
-          <Link to="/" className="mr-4">
+          <Link to="/home" className="mr-4">
             Home
           </Link>
           <Link to="/profile" className="mr-4">
