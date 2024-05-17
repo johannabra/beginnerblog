@@ -3,14 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import { BlogContext } from "../context/BlogContext";
 
 const EditPost = () => {
-  const { postId } = useParams(); // Hämta postId från URL:en
+  const { postId } = useParams();
   const { posts, setPosts } = useContext(BlogContext);
-
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
 
   useEffect(() => {
-    // Hitta det valda inlägget baserat på postId
     const selectedPost = posts.find((post) => post.id === parseInt(postId));
     if (selectedPost) {
       setTitle(selectedPost.title);
