@@ -20,7 +20,7 @@ const LoginComponent = () => {
 
   return (
     <section>
-      {userLoggedIn && <Navigate to={"/"} replace={true} />}
+      {userLoggedIn && <Navigate to={"/home"} replace={true} />}
       <div>
         <h3>Welcome back User! I love you </h3>
       </div>

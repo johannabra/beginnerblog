@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { BlogContext } from "../context/BlogContext";
 
@@ -36,6 +36,7 @@ const EditPost = () => {
       return post;
     });
     setPosts(updatedPosts);
+    window.location.href = "/home";
   };
 
   return (
@@ -45,8 +46,12 @@ const EditPost = () => {
       <input type="text" value={title} onChange={handleTitleChange} />
       <label>Text:</label>
       <textarea value={text} onChange={handleTextChange}></textarea>
-      <button onClick={handleSave}>Save</button>
-      <Link to="/home">Cancel</Link>
+      <button onClick={handleSave} aria-label="save">
+        Save
+      </button>
+      <button aria-label="cancel">
+        <Link to="/home">Cancel</Link>
+      </button>
     </div>
   );
 };

@@ -35,6 +35,7 @@ const CreatePost = () => {
   return (
     <form onSubmit={handleSubmit}>
       <input
+        className="border-solid border-2"
         type="text"
         name="title"
         value={title}
@@ -42,6 +43,7 @@ const CreatePost = () => {
         placeholder="Title"
       />
       <textarea
+        className="border-solid border-4"
         name="text"
         value={text}
         onChange={handleChange}
