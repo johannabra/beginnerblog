@@ -8,7 +8,7 @@ import LoginComponent from "./components/LoginComponent";
 import RegisterComponent from "./components/RegisterComponent";
 import { BlogPostProvider } from "./context/BlogContext";
 import EditPage from "./pages/EditPage";
-import { CommentProvider } from "./context/ResponsContext";
+import { CommentProvider } from "./context/ResponseContext";
 
 const App = () => {
   return (

@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { ResponsContext } from "../context/ResponsContext";
+import { ResponseContext } from "../context/ResponseContext";
 import { AuthContext } from "../context/AuthContext";
 
 const Comments = ({ postId }) => {
-  const { comments, setComments } = useContext(ResponsContext);
+  const { comments, setComments } = useContext(ResponseContext);
   const { currentUser } = useContext(AuthContext);
 
   const postComments = comments.filter((comment) => comment.postId === postId);
@@ -57,10 +57,10 @@ const Comments = ({ postId }) => {
 const CommentForm = ({ onSubmit }) => {
   return (
     <form onSubmit={onSubmit}>
-      <textarea name="comment" rows="2" cols="50" required></textarea>
+      <textarea name="comment" rows="1" cols="50" required></textarea>
       <br />
       <button type="submit" className="text-sm">
-        Submit comment
+        Add Comment
       </button>
     </form>
   );

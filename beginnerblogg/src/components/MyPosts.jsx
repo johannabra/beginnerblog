@@ -14,17 +14,19 @@ const MyPosts = () => {
   const myPosts = posts.filter((post) => post.author === currentUser.email);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-center items-center ">
       {myPosts.map((post) => {
         const isCurrentUserAuthor = post.author === currentUser.email;
         return (
-          <div key={post.id} className=" bg-slate-200 border-solid m-2 px-8">
+          <div
+            key={post.id}
+            className=" bg-gray-100 w-1/2 px-10 py-5 m-2 border-2 border-solid border-black">
             <p className="text-blue-700 font-bold">{post.author}</p>
             <h3>{post.title}</h3>
             <p>{post.text}</p>
 
             {isCurrentUserAuthor && (
-              <div>
+              <div className="my-2">
                 <button aria-label="edit">
                   <Link to={`/edit/${post.id}`}>Edit</Link>
                 </button>

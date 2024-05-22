@@ -40,18 +40,28 @@ const EditPost = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col w-1/2 m-10 p-2 border-2 border-solid border-black">
       <h2>Edit Post</h2>
       <label>Title:</label>
-      <input type="text" value={title} onChange={handleTitleChange} />
+      <input
+        className="bg-gray-100"
+        type="text"
+        value={title}
+        onChange={handleTitleChange}
+      />
       <label>Text:</label>
-      <textarea value={text} onChange={handleTextChange}></textarea>
-      <button onClick={handleSave} aria-label="save">
-        Save
-      </button>
-      <button aria-label="cancel">
-        <Link to="/home">Cancel</Link>
-      </button>
+      <textarea
+        className="bg-gray-100"
+        value={text}
+        onChange={handleTextChange}></textarea>
+      <div className="m-2">
+        <button onClick={handleSave} aria-label="save">
+          Save
+        </button>
+        <button aria-label="cancel">
+          <Link to="/home">Cancel</Link>
+        </button>
+      </div>
     </div>
   );
 };

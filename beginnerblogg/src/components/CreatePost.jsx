@@ -26,30 +26,36 @@ const CreatePost = () => {
         text: text,
         author: currentUser.email,
       };
-      setPosts([...posts, newPost]);
+      setPosts([newPost, ...posts]);
       setTitle("");
       setText("");
       console.log("Submitted input:", input);
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        className="border-solid border-2"
-        type="text"
-        name="title"
-        value={title}
-        onChange={handleChange}
-        placeholder="Title"
-      />
-      <textarea
-        className="border-solid border-4"
-        name="text"
-        value={text}
-        onChange={handleChange}
-        placeholder="Text"></textarea>
-      <button type="submit">Add post</button>
-    </form>
+    <div className="flex justify-center items-center">
+      <form
+        className="flex flex-col w-1/2 m-10 p-2 border-2 border-solid border-black "
+        onSubmit={handleSubmit}>
+        <input
+          className="border-solid border-2"
+          type="text"
+          name="title"
+          value={title}
+          onChange={handleChange}
+          placeholder="Title"
+        />
+        <textarea
+          className="border-solid border-4"
+          name="text"
+          value={text}
+          onChange={handleChange}
+          placeholder="Text"></textarea>
+        <button className="m-2" type="submit">
+          Add post
+        </button>
+      </form>
+    </div>
   );
 };
 

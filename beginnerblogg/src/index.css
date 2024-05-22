@@ -3,11 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  a {
-    @apply text-blue-400 underline;
-  }
   button {
-    @apply max-w-36 max-h-14 mx-2 px-4 border-solid border-pink-800 border-2 rounded-full bg-pink-900 text-pink-100 font-semibold;
+    @apply max-w-36 max-h-14 mx-2 px-4 border-solid border-black border-2 rounded-full bg-gray-900 text-white font-semibold;
   }
   h1 {
     @apply text-center font-bold text-4xl;
